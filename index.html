@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Ammu ❤</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-image:url("ammu\,jpg.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #4f789e;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .header {
+      padding: 50px 20px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #dcc7c5;
+      text-shadow: 2px 2px 5px #000;
+    }
+    .letter {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgb(212, 206, 206);
+      font-size: 1.2em;
+      line-height: 1.8;
+    }
+    .signature {
+      margin-top: 30px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2em;
+      color: #e50808;
+    }
+    canvas.confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas class="confetti"></canvas>
+
+  <div class="header">Happy Birthday Ammu ❤</div>
+
+  <div class="letter">
+    Aaj ka din mere liye sirf tumhara birthday nahi hai... balki uss roshni ka din hai, jisne meri zindagi ko roshan kar diya.<br><br>
+    Tumhara hona meri duniya ka sabse khoobsurat hissa hai. Jab bhi tum muskurati ho na, lagta hai duniya ruk gayi hai — aur us muskaan mein main apna sab kuch bhool jata hoon.<br><br>
+    Ammu, shayad lafzon mein kabhi nahi keh paun, lekin dil se har din dua karta hoon ki tumhara har din muskurahat se bhara ho.<br><br>
+    Tumhara gussa bhi cute lagta hai, aur tumhari baatein mere liye sukoon ban gayi hain.<br><br>
+    Main janta hoon zindagi hamesha aasaan nahi hoti, lekin jab tak tum mere saath ho, har mushkil asaan lagti hai.<br><br>
+    Tum meri dua ho, mera fakhar ho, aur mera sachcha pyaar ho.<br><br>
+    Janamdin mubarak ho meri Ammu ❤<br>
+    Tumhari zindagi mein har saal nayi khushiyan le kar aaye.<br><br>
+    Tum jahan bhi raho, hamesha khush raho... aur yaad rakhna,<br>
+    koi ek insaan hai jo har pal tumse mohabbat karta hai — bina kisi shart ke.
+    <div class="signature">– Tumhara Hasan</div>
+  </div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="ammu.mp3.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    const duration = 20 * 1000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 3,
+        angle: 60,
+        spread: 70,
+        origin: { x: 0 }
+      });
+      confetti({
+        particleCount: 3,
+        angle: 120,
+        spread: 70,
+        origin: { x: 1 }
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  </script>
+
+</body>
+</html>
